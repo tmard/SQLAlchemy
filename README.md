@@ -51,33 +51,39 @@ The following steps were completed prior to analysis:
 Designed a Flask API based on the queries above using several SQLAlchemy precipitation and temperature queries in an API using a Python Flask App. Dates can only be chosen between 2010-01-01 and 2017-08-23. 
 
 
-* /
+/
 
-Home page
-
-* /api/v1.0/precipitation
-
-JSON representation of the dictionary of the yearly precipitation analysis from the most recent date
+* Home page
 
 
-* /api/v1.0/stations
 
-JSON list of all the weather stations and their characteristics from the dataset
+/api/v1.0/precipitation
 
-
-* /api/v1.0/tobs
-
-JSON list of temperature observations for the previous year
+* JSON representation of the dictionary of the yearly precipitation analysis from the most recent date
 
 
-* /api/v1.0/YYYY-MM-DD
 
-JSON list of minimum, average & maximum temperatures for the range beginning with the provided start date through to 2017-08-23
+/api/v1.0/stations
+
+* JSON list of all the weather stations and their characteristics from the dataset
 
 
-* /api/v1.0/YYYY-MM-DD/YYYY-MM-DD
 
-JSON list of minimum, average & maximum temperatures for the range beginning with the provided start and end date range
+/api/v1.0/tobs
+
+* JSON list of temperature observations for the previous year
+
+
+
+/api/v1.0/YYYY-MM-DD
+
+* JSON list of minimum, average & maximum temperatures for the range beginning with the provided start date through to 2017-08-23
+
+
+
+/api/v1.0/YYYY-MM-DD/YYYY-MM-DD
+
+* JSON list of minimum, average & maximum temperatures for the range beginning with the provided start and end date range
 
 
 
