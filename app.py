@@ -58,13 +58,13 @@ def welcome():
         f"Click here for direct link</a></li><br/>"
         f"<strong>List of minimum, average & maximum temperatures for the range beginning with the provided start and end date range:</strong>\
             api/v1.0/&lt;start&gt;/&lt;end&gt;<br/>"
-        f"<li><a href=http://127.0.0.1:5000/api/v1.0/01-01-2010/23-08-2017>"
+        f"<li><a href=http://127.0.0.1:5000/api/v1.0/01-01-2010/08-23-2017>"
         f"Click here for direct link</a></li><br/><br/>"
 
         f"Be advsed that dates can only be provided between 01-01-2010 and 08-23-2017 inclusive.<br/>"
-        f"For &lt;start&gt;: Please enter a start date in the format dd-mm-YYYY where &lt;start&gt; is. For example: /api/v1.0/01-01-2010. <br/>"
-        f"For &lt;start&gt;/&lt;end&gt;: Please enter a start date in the format dd-mm-YYYY followed by an end date in the format dd-mm-YYYY\
-            where &lt;start&gt;/&lt;end&gt; is. For example: /api/v1.0/01-01-2010/23-08-2017.<br/><br/><br/>"
+        f"For &lt;start&gt;: Please enter a start date in the format mm-dd-YYYY where &lt;start&gt; is. For example: /api/v1.0/01-01-2010. <br/>"
+        f"For &lt;start&gt;/&lt;end&gt;: Please enter a start date in the format mm-dd-YYYY followed by an end date in the format mm-dd-YYYY\
+            where &lt;start&gt;/&lt;end&gt; is. For example: /api/v1.0/01-01-2010/08-23-2017.<br/><br/><br/>"
         
     )
 
@@ -187,7 +187,7 @@ def stats(start=None, end=None):
     sel = [func.min(measurement.tobs), func.avg(measurement.tobs), func.max(measurement.tobs)]
 
     if not end:
-        start = dt.datetime.strptime(start, "%d-%m-%Y")
+        start = dt.datetime.strptime(start, "%m-%d-%Y")
         results_start = session.query(*sel).\
             filter(measurement.date >= start).all()
 
@@ -196,10 +196,9 @@ def stats(start=None, end=None):
         temps = list(np.ravel(results_start))
         return jsonify(temps)
 
-
     # Calculate TMIN, TAVG, TMAX with start and stop
-    start = dt.datetime.strptime(start, "%d-%m-%Y")
-    end = dt.datetime.strptime(end, "%d-%m-%Y")
+    start = dt.datetime.strptime(start, "%m-%d-%Y")
+    end = dt.datetime.strptime(end, "%m-%d-%Y")
 
     results_range = session.query(*sel).\
         filter(measurement.date >= start).\
