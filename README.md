@@ -1,12 +1,16 @@
 # SQLAlchemy
-Climate analysis
 
+## Table of Contents
+    * [Background] (https://github.com/tmard/SQLAlchemy#background)
+    * [Part 1: Analyze and Explore the Climate Data] (https://github.com/tmard/SQLAlchemy#part-1-analyze-and-explore-the-climate-data)
+    * [Part 2: Design the Climate App] (https://github.com/tmard/SQLAlchemy#part-2-design-the-climate-app)
+    * [References] (https://github.com/tmard/SQLAlchemy#references)
 
 
 ## Background
 
 
-Prior to going on a trip to Honolulu, Hawaii, I decided to perform a climate analysis about the area. 
+Prior to a trip to Honolulu, Hawaii, a climate analysis about the area was performed. The two major components consisted of a *Climate Analysis and Exploration* and *Climate App*.
 
 
 
