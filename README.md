@@ -1,10 +1,10 @@
 # SQLAlchemy
 
 ## Table of Contents
-    * [Background] (https://github.com/tmard/SQLAlchemy#background)
-    * [Part 1: Analyze and Explore the Climate Data] (https://github.com/tmard/SQLAlchemy#part-1-analyze-and-explore-the-climate-data)
-    * [Part 2: Design the Climate App] (https://github.com/tmard/SQLAlchemy#part-2-design-the-climate-app)
-    * [References] (https://github.com/tmard/SQLAlchemy#references)
+    [Background](https://github.com/tmard/SQLAlchemy#background)
+    [Part 1: Analyze and Explore the Climate Data](https://github.com/tmard/SQLAlchemy#part-1-analyze-and-explore-the-climate-data)
+    [Part 2: Design the Climate App] (https://github.com/tmard/SQLAlchemy#part-2-design-the-climate-app)
+    [References] (https://github.com/tmard/SQLAlchemy#references)
 
 
 ## Background
