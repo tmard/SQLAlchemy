@@ -79,7 +79,7 @@ def precipitation():
     # Find the latest date in the dataset (Order by descending date)
     latest_date_str = session.query(measurement.date).\
         order_by(measurement.date.desc()).\
-        first()[0]
+            first()[0]
 
     latest_date = dt.date.fromisoformat(latest_date_str)
 
@@ -90,8 +90,8 @@ def precipitation():
     # Create query of 'Measurement' table for prcp and date columns 
     yearly_precipitation_query = session.query(measurement.date, 
                                                measurement.prcp).\
-        filter(measurement.date.between(prior_year_date, latest_date)).\
-        all()
+                                                filter(measurement.date.between(prior_year_date, latest_date)).\
+                                                    all()
 
 
     session.close()
@@ -121,7 +121,7 @@ def stations():
                                   station.latitude,
                                   station.longitude,
                                   station.elevation).\
-        all()
+                                    all()
 
     session.close()
 
@@ -143,8 +143,8 @@ def tobs():
     # Find latest date for most active station = Station "USC00519281".
     top_active_station = session.query(measurement.station).\
         group_by(measurement.station).\
-        order_by(func.count(measurement.station).desc()).\
-        first()
+            order_by(func.count(measurement.station).desc()).\
+                first()
     t_station = top_active_station.station
     
     latest_date_str = session.query(measurement.date).\
@@ -160,8 +160,8 @@ def tobs():
     # Design a query to retrieve the last 12 months of temperature data
     yearly_temperature_data = session.query(measurement.date, 
                                             measurement.tobs).\
-        filter(measurement.date.between(one_year_prior, latest_date)).\
-        all()
+                                                filter(measurement.date.between(one_year_prior, latest_date)).\
+                                                    all()
 
 
     session.close()
@@ -184,7 +184,9 @@ def stats(start=None, end=None):
     session = Session(engine)
 
     # Select Statement
-    sel = [func.min(measurement.tobs), func.avg(measurement.tobs), func.max(measurement.tobs)]
+    sel = [func.min(measurement.tobs), 
+           func.avg(measurement.tobs), 
+           func.max(measurement.tobs)]
 
     if not end:
         start = dt.datetime.strptime(start, "%m-%d-%Y")
@@ -202,7 +204,7 @@ def stats(start=None, end=None):
 
     results_range = session.query(*sel).\
         filter(measurement.date >= start).\
-        filter(measurement.date <= end).all()
+            filter(measurement.date <= end).all()
 
     session.close()
 
