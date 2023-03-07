@@ -6,9 +6,10 @@ Table of Contents
 =================
 
   * [Background](#background)
-  * [Part 1: Analyze and Explore the Climate Data](#part-1:-analyze-and-explore-the-climate-data)
-  * [Part 2: Design the Climate App](#part-2:-design-the-climate-app)
+  * [Part 1: Analyze and Explore the Climate Data](#part-1-analyze-and-explore-the-climate-data)
+  * [Part 2: Design the Climate App](#part-2-design-the-climate-app)
   * [References](#references)
+
 
 
 
