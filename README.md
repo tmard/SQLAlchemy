@@ -20,6 +20,7 @@ Prior to a trip to Honolulu, Hawaii, a climate analysis about the area was perfo
 
 
 
+
 ## Part 1: Analyze and Explore the Climate Data
 
 
@@ -33,25 +34,26 @@ The following steps were completed prior to analysis:
 4. Performed preciptiation analysis and station analysis in the following two subsections.
 
 
-**Preceiptation Analysis**
+**Preciptation Analysis**
 
 1. Found the most recent date in the dataset.
-2. Utilizing that date, retrieved the previous 12 months of precipitation data by querying the previous 12 months of data. 
-3. Selected only the "date" and "prcp" values.
+2. Utilizing the most recent date, retrieved the previous 12 months of precipitation data by querying the previous 12 months of data. 
+3. Selected only the "date" and "prcp" (precipitation) values.
 4. Loaded the query results into a Pandas DataFrame and set index to "date" column.
 5. Sorted DataFrame values by "date".
-6. Plotted the results by using the DataFrame plot method.
+6. Plotted the precipitation results over the last year by using the DataFrame plot method.
 7. Utilized Pandas to print summary statistics for the precipitation data. 
 
 
 **Station Analysis**
 
 1. Designed a query to calculate the total number of stations in the dataset.
-2. Designed a query to find the most-active stations and list the stations and observation counts in descending order. 
+2. Designed a query to find the most-active weather stations and list the stations and observation counts in descending order. 
 3. Answered the following question: Which station id has the greatest number of observations?
 4. Designed a query that calculates the lowest, highest and average temperatures that filters on the most-active station ID found in the previous query.
-5. Designed a query to retrieve the previous 12 months of temperature observation (TOBS) data. Then plotted the results as a histogram with bins=12.
+5. Designed a query to retrieve the previous 12 months of temperature observation (TOBS) data. Then plotted these results as a histogram with bins=12.
 5. Closed session. 
+
 
 
 
@@ -94,6 +96,7 @@ Designed a Flask API based on the queries above using several SQLAlchemy precipi
 /api/v1.0/YYYY-MM-DD/YYYY-MM-DD
 
 * JSON list of minimum, average & maximum temperatures for the range beginning with the provided start and end date range
+
 
 
 
