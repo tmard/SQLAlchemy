@@ -163,7 +163,6 @@ def tobs():
                                                 filter(measurement.date.between(one_year_prior, latest_date)).\
                                                     all()
 
-
     session.close()
 
 
@@ -175,9 +174,9 @@ def tobs():
 
 
 
-@app.route("/api/v1.0/<start>", defaults={'end': None})
+@app.route('/api/v1.0/<start>', defaults={'end': None})
 @app.route("/api/v1.0/<start>/<end>")
-def stats(start=None, end=None):
+def date_temps(start=None, end=None):
     """JSON list of the minimum, average and maximum temperatures for a given start or start-end date range."""
     """When only the start date is provided, calculate TMIN, TAVG, and TMAX for all dates equal to or greater than the provided start date."""
     """When the start and end date is provided, calculate the TMIN, TAVG, and TMAX for dates between the provided start and end date inclusive."""
