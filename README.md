@@ -93,7 +93,7 @@ Designed a Flask API based on the queries above using several SQLAlchemy precipi
 
 
 
-/api/v1.0/YYYY-MM-DD/MM-DD-YYYY
+/api/v1.0/MM-DD-YYYY/MM-DD-YYYY
 
 * JSON list of minimum, average & maximum temperatures for the range beginning with the provided start and end date range
 
