@@ -52,7 +52,7 @@ def welcome():
         f"<strong>Temperature Observations for the Last Year:</strong> api/v1.0/tobs<br/>"
         f"<li><a href=http://127.0.0.1:5000/api/v1.0/tobs>"
         f"Click here for direct link</a></li><br/>"
-        f"<strong>List of minimum, average & maximum temperatures for the range beginning with the provided start date through to 2017-08-23:</strong>\
+        f"<strong>List of minimum, average & maximum temperatures for the range beginning with the provided start date through to 08-23-2017:</strong>\
             api/v1.0/&lt;start&gt;<br/>"
         f"<li><a href=http://127.0.0.1:5000/api/v1.0/01-01-2010>"
         f"Click here for direct link</a></li><br/>"
