@@ -60,7 +60,7 @@ The following steps were completed prior to analysis:
 ## Part 2: Design the Climate App
 
 
-Designed a Flask API based on the queries above using several SQLAlchemy precipitation and temperature queries in an API using a Python Flask App. Dates can only be chosen between 2010-01-01 and 2017-08-23. 
+Designed a Flask API based on the queries above using several SQLAlchemy precipitation and temperature queries in an API using a Python Flask App. Dates can only be chosen between 01-01-2010 and 08-23-2017. 
 
 
 /
@@ -87,13 +87,13 @@ Designed a Flask API based on the queries above using several SQLAlchemy precipi
 
 
 
-/api/v1.0/YYYY-MM-DD
+/api/v1.0/MM-DD-YYYY
 
-* JSON list of minimum, average & maximum temperatures for the range beginning with the provided start date through to 2017-08-23
+* JSON list of minimum, average & maximum temperatures for the range beginning with the provided start date through to 08-23-2017
 
 
 
-/api/v1.0/YYYY-MM-DD/YYYY-MM-DD
+/api/v1.0/YYYY-MM-DD/MM-DD-YYYY
 
 * JSON list of minimum, average & maximum temperatures for the range beginning with the provided start and end date range
 
